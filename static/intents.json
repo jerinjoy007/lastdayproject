@@ -1,0 +1,28 @@
+{"intents":[
+    
+    
+    {"tag": "greeting",
+     "patterns":["Hi","Hey","Is anyone there?","Hello","Hay"],
+     "responses":["hello","hi","hi there"]
+    },
+    {"tag": "goodbye",
+     "patterns":["Bye","bey","See you later","Goodbye","nirtham","panna gana","cinegaana","pinaka"],
+     "responses":["See you later","Have a nice day","Bye! Come back again"]
+    },
+    {"tag":"question",
+     "patterns":["what are you","who are you","what is your name","niyara","nahin a raha","narayan","aaran","yara"],
+     "responses":["i am nubi AI","i am your Library assistance"]      
+    },
+    {"tag":"search",
+     "patterns":["what are the services you offer","how many services do you provide","do you provide any other services"],
+     "responses":["For now  I am only offering book search  other services will be available in the future","The book search is the only one I'm offering right now other services will be added soon","Now, I only offer book search, I will add other services in the future"]      
+    },
+    {"tag":"searchmal",
+     "patterns":["england uk 7 in telugu","england ka sevanagar","banduk kaise banaen","ningal ente ellam 7 telugu"],
+     "responses":["For now  I am only offering book search  other services will be available in the future","The book search is the only one I'm offering right now other services will be added soon","Now, I only offer book search, I will add other services in the future"]      
+    }
+       
+    
+]
+
+}

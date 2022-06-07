@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding-right: 72%;
+  width: 70px;
+  height: 70px;
+}
+textarea {
+  display: none;
+}
+input {
+  display: none;
+}
+button {
+  display: flex;
+  margin-left: 748px;
+  position: fixed;
+  border-radius: 55px;
+}
+#share-toggle {
+  display: none;
+}
+
+span,
+a {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.span {
+  width: 50px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #b0b5ca;
+  color: #333;
+  font-size: 30px;
+  z-index: 1;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(148, 121, 121, 0.6);
+}
+
+.Food-list {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Food-list a {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
+  font-size: 25px;
+}
+
+#share-toggle:checked ~ .Food-list a:nth-child(1) {
+  background-color: #3b5998;
+  transition-delay: 0s;
+  transform: translateY(-100px);
+}
+
+#share-toggle:checked ~ .Food-list a:nth-child(2) {
+  background-color: #25d366;
+  transition-delay: 0.1s;
+  transform: translate(70px, -70px);
+}
+
+#share-toggle:checked ~ .Food-list a:nth-child(3) {
+  background-color: #fffc00;
+  transition-delay: 0.2s;
+  transform: translateX(100px);
+}
+
+#share-toggle:checked ~ .Food-list a:nth-child(4) {
+  background-color: #ff0000;
+  transition-delay: 0.3s;
+  transform: translate(70px, 70px);
+}
+
+#share-toggle:checked ~ .Food-list a:nth-child(5) {
+  background-color: #ff4500;
+  transition-delay: 0.4s;
+  transform: translateY(100px);
+}
+
+#share-toggle:checked ~ .Food-list a:nth-child(6) {
+  background-color: #00acee;
+  transition-delay: 0.5s;
+  transform: translate(-70px, 70px);
+}
+
+#share-toggle:checked ~ .Food-list a:nth-child(7) {
+  background-color: #ea4c89;
+  transition-delay: 0.6s;
+  transform: translateX(-100px);
+}
+
+#share-toggle:checked ~ .Food-list a:nth-child(8) {
+  background-color: #0e76a8;
+  transition-delay: 0.7s;
+  transform: translate(-70px, -70px);
+}
+
+p span {
+  display: inline-block;
+  padding-top: 25px;
+  font-size: 75px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 50;
+  -webkit-font-smoothing: antialiased;
+}
+p span::before,
+p span::after {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -2px;
+  transform-origin: left top;
+  transition: all ease-out 0.3s;
+  content: attr(data-text);
+}
+p span::before {
+  z-index: 1;
+  color: rgba(139, 202, 228, 0.2);
+  transform: scale(1.1, 1) skew(0deg, 20deg);
+}
+p span::after {
+  z-index: 2;
+  color: rgb(28, 17, 97);
+  text-shadow: -1px 0 1px rgb(255, 255, 255), 1px 0 1px rgba(196, 193, 193, 0.8);
+  transform: rotateY(-40deg);
+}
+p span:hover::before {
+  transform: scale(1.1, 1) skew(0deg, 5deg);
+}
+p span:hover::after {
+  transform: rotateY(-10deg);
+}
+p span + span {
+  margin-left: 0.3em;
+}
+@media (min-width: 10em) {
+  p {
+    font-size: 2em;
+    padding-top: 50px;
+  }
+  p span::before,
+  p span::after {
+    display: block;
+  }
+}
+@media (min-width: 30em) {
+  p {
+    font-size: 3em;
+    padding-top: 50px;
+  }
+}
+@media (min-width: 40em) {
+  p {
+    font-size: 5em;
+    padding-top: 50px;
+  }
+}
+@media (min-width: 60em) {
+  p {
+    font-size: 4em;
+    padding-top: 50px;
+  }
+}
+ 
